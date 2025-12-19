@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Categories - AcademiaHub</title>
+    <meta name="description" content="Explore academic materials across 50+ categories including Engineering, Computer Science, Business, Medicine, Law, and more.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="categories.css">
+</head>
+<body>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <div class="animated-background">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+    </div>
+
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-graduation-cap"></i>
+                <span class="brand-text">Academia<span class="brand-highlight">Hub</span></span>
+            </div>
+            
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">
+                    <i class="fas fa-home"></i> Home
+                </a>
+                <a href="categories.html" class="nav-link active">
+                    <i class="fas fa-th-large"></i> Categories
+                </a>
+                <a href="library.html" class="nav-link">
+                    <i class="fas fa-book"></i> Library
+                </a>
+                <a href="about.html" class="nav-link">
+                    <i class="fas fa-info-circle"></i> About
+                </a>
+                <a href="contact.html" class="nav-link">
+                    <i class="fas fa-envelope"></i> Contact
+                </a>
+            </div>
+
+            <div class="nav-actions">
+                <button class="btn-search" id="searchBtn">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="search-overlay" id="searchOverlay">
+        <div class="search-container">
+            <button class="search-close" id="searchClose">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search for projects, thesis, research papers..." id="searchInput">
+            </div>
+            <div class="search-suggestions">
+                <span class="suggestion-tag">Engineering Projects</span>
+                <span class="suggestion-tag">Computer Science</span>
+                <span class="suggestion-tag">Business Administration</span>
+                <span class="suggestion-tag">Medical Research</span>
+                <span class="suggestion-tag">Law Studies</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="breadcrumb" data-aos="fade-right">
+                <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                <span>/</span>
+                <span>Categories</span>
+            </div>
+            <h1 class="page-title" data-aos="fade-up">Academic Categories</h1>
+            <p class="page-description" data-aos="fade-up" data-aos-delay="100">
+                Explore our comprehensive collection of academic materials across 50+ disciplines
+            </p>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="all-categories-section">
+        <div class="container">
+            <!-- Engineering & Technology -->
+            <div class="category-group" data-aos="fade-up">
+                <div class="group-header">
+                    <div class="group-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <div class="group-info">
+                        <h2 class="group-title">Engineering & Technology</h2>
+                        <p class="group-count">15 Categories • 3,500+ Projects</p>
+                    </div>
+                </div>
+                
+                <div class="categories-grid">
+                    <a href="library.html?category=civil-engineering" class="category-item">
+                        <div class="category-icon-small">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <div class="category-details">
+                            <h3>Civil Engineering</h3>
+                            <p>450+ projects</p>
+                        </div>
+                        <i class="fas fa-arrow-right category-arrow"></i>
+                    </a>
+
+                    <a href="library.html?category=mechanical-engineering" class="category-item">
+                        <div class="category-icon-small">
+                            <i class="fas fa-gear"></i>
+                        </div>
+                        <div class="category-details">
+                            <h3>Mechanical Engineering</h3>
+                            <p>520+ projects</p>
+                        </div>
+                        <i class="fas fa-arrow-right category-arrow"></i>
+                    </a>
+
+                    <a href="library.html?category=electrical-engineering" class="category-item">
+                        <div class="category-icon-small">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <div class="category-details">
+                            <h3>Electrical Engineering</h3>
+                            <p>480+ projects</p>
+                        </div>
+                        <i class="fas fa-arrow-right category-arrow"></i>
+                    </a>
+
+                    <a href="library.html?category=chemical-engineering" class="category-item">
+                        <div class="category-icon-small">
+                            <i class="fas fa-vial"></i>
+                        </div>
+                        <div class="category-details">
+                            <h3>Chemical Engineering</h3>
+                            <p>320+ projects</p>
+                        </div>
+                        <i class="fas fa-arrow-right category-arrow"></i>
+                    </a>
+
+                    <a href="library.html?category=industrial-engineering" class="category-item">
+                        <div class="category-icon-small">
+                            <i class="fas fa-industry"></i>
+                        </div>
+                        <div class="category-details">
+                            <h3>Industrial Engineering</h3>
+                            <p>280+ projects</p>
+                        </div>
+                        <i class="fas fa-arrow-right category-arrow"></i>
+                    </a>
+
+                    <a href="library.html?category=telecommunication" class="category-item">
+                        <div class="category-icon-small">
+                            <i class="fas fa-satellite-dish"></i>
+                        </div>
+                        <div class="category-details">
+                            <h3>Telecommunication</h3>
+                            <p>240+ projects</p>
+                        </div>
+                        <i class="fas fa-arrow-right category-arrow"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Computer Science & IT -->
+            <div class="category-group" data-aos="fade-up">
+                <div class="group-header">
+                    <div class="group-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div class="group-info">
+                        <h2 class="group-title">Computer Science & IT</h2>
+                        <p class="group-count">12 Categories • 2,800+ Projects</p>
+                    </div>
+                </div>
+                
+                <div class="categories-grid">
+                    <a href="library.html?category=software-engineering" class="category-item">
+                        <div class="category-icon-small">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="category-details">
+                            <h3>Software Engineering</h3>
+                            <p>650+ projects</p>
+                        </div>
+                        <i class="fas fa-arrow-right category-arrow"></i>
+                    </a>
+
+                    <a href="library.html?category=web-development" class="category-item">
+                        <div class="category-icon-small">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div class="category-details">
+                            <h3>Web Development</h3>
+                            <p>520+ projects</p>
+                        </div>
+                        <i class="fas fa-arrow-right category-arrow"></i>
+                    </a>
+
+                    <a href="library.html?category=mobile-app-development" class="category-item">
+                        <div class="category-icon-small">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="category-details">
+                            <h3>Mobile App Development</h3>
+                            <p>380+ projects</p>
+                        </div>
+                        <i class="fas fa-arrow-right category-arrow"></i>
+                    </a>
+
+                    <a href="library.html?category=artificial-intelligence" class="category-item">
+                        <div class="category-icon-small">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="category-details">
+                            <h3>Artificial Intelligence</h3>
+                            <p>420+ projects</p>
+                        </div>
+                        <i class="fas fa-arrow-right category-arrow"></i>
+                    </a>
+
+                    <a href="library.html?category=cybersecurity" class="category-item">
+                        <div class="category-icon-small">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="category-details">
+                            <h3>Cybersecurity</h3>
+                            <p>340+ projects</p>
+                        </div>
+                        <i class="fas fa-arrow-right category-arrow"></i>
+                    </a>
+
+                    <a href="library.html?category=data-science" class="category-item">
+                        <div class="category-icon-small">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="category-details">
+                            <h3>Data Science & Analytics</h3>
+                            <p>490+ projects</p>
+                        </div>
+                        <i class="fas fa-arrow-right category-arrow"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Business & Management -->
+            <div class="category-group" data-aos="fade-up">
+                <div class="group-header">
+                    <div class="group-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="group-info">
+                        <h2 class="group-title">Business & Management</h2>
+                        <p class="group-count">10 Categories • 2,200+ Projects</p>
+                    </div>
+                </div>
+                
+                <div class="categories-grid">
+                    <a href="library.html?category=business-administration" class="category-item">
+                        <div class="category-icon-small">
+                            <i class="fas fa-business-time"></i>
+                        </div>
+                        <div class="category-details">
+                            <h3>Business Administration</h3>
+                            <p>580+ projects</p>
+                        </div>
+                        <i class="fas fa-arrow-right category-arrow"></i>
+                    </a>
+
+                    <a href="library.html?category=mba" class="category-item">
+                        <div class="category-icon-small">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="category-details">
+                            <h3>MBA Case Studies</h3>
+                            <p>420+ projects</p>
+                        </div>
+                        <i class="fas fa-arrow-right category-arrow"></i>
+                    </a>
+
+                    <a href="library.html?category=accounting" class="category-item">
+                        <div class="category-icon-small">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <div class="category-details">
+                            <h3>Accounting & Finance</h3>
+                            <p>390+ projects</p>
+                        </div>
+                        <i class="fas fa-arrow-right category-arrow"></i>
+                    </a>
+
+                    <a href="library.html?category=marketing" class="category-item">
+                        <div class="category-icon-small">
+                            <i class="fas fa-bullhorn"></i>
+                        </div>
+                        <div class="category-details">
+                            <h3>Marketing</h3>
+                            <p>340+ projects</p>
+                        </div>
+                        <i class="fas fa-arrow-right category-arrow"></i>
+                    </a>
+
+                    <a href="library.html?category=human-resources" class="category-item">
+                        <div class="category-icon-small">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="category-details">
+                            <h3>Human Resources</h3>
+                            <p>280+ projects</p>
+                        </div>
+                        <i class="fas fa-arrow-right category-arrow"></i>
+                    </a>
+
+                    <a href="library.html?category=project-management" class="category-item">
+                        <div class="category-icon-small">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <div class="category-details">
+                            <h3>Project Management</h3>
+                            <p>190+ projects</p>
+                        </div>
+                        <i class="fas fa-arrow-right category-arrow"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Medical & Health Sciences -->
+            <div class="category-group" data-aos="fade-up">
+                <div class="group-header">
+                    <div class="group-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <div class="group-info">
+                        <h2 class="group-title">Medical & Health Sciences</h2>
+                        <p class="group-count">8 Categories • 1,800+ Projects</p>
+                    </div>
+                </div>
+                
+                <div class="categories-grid">
+                    <a href="library.html?category=nursing" class="category-item">
+                        <div class="category-icon-small">
+                            <i class="fas fa-user-nurse"></i>
+                        </div>
+                        <div class="category-details">
+                            <h3>Nursing</h3>
+                            <p>420+ projects</p>
+                        </div>
+                        <i class="fas fa-arrow-right category-arrow"></i>
+                    </a>
+
+                    <a href="library.html?category=medicine" class="category-item">
+                        <div class="category-icon-small">
+                            <i class="fas fa-stethoscope"></i>
+                        </div>
+                        <div class="category-details">
+                            <h3>Medicine</h3>
+                            <p>380+ projects</p>
+                        </div>
+                        <i class="fas fa-arrow-right category-arrow"></i>
+                    </a>
+
+                    <a href="library.html?category=public-health" class="category-item">
+                        <div class="category-icon-small">
+                            <i class="fas fa-clinic-medical"></i>
+                        </div>
+                        <div class="category-details">
+                            <h3>Public Health</h3>
+                            <p>290+ projects</p>
+                        </div>
+                        <i class="fas fa-arrow-right category-arrow"></i>
+                    </a>
+
+                    <a href="library.html?category=pharmacy" class="category-item">
+                        <div class="category-icon-small">
+                            <i class="fas fa-pills"></i>
+                        </div>
+                        <div class="category-details">
+                            <h3>Pharmacy</h3>
+                            <p>260+ projects</p>
+                        </div>
+                        <i class="fas fa-arrow-right category-arrow"></i>
+                    </a>
+
+                    <a href="library.html?category=physiotherapy" class="category-item">
+                        <div class="category-icon-small">
+                            <i class="fas fa-running"></i>
+                        </div>
+                        <div class="category-details">
+                            <h3>Physiotherapy</h3>
+                            <p>180+ projects</p>
+                        </div>
+                        <i class="fas fa-arrow-right category-arrow"></i>
+                    </a>
+
+                    <a href="library.html?category=nutrition" class="category-item">
+                        <div class="category-icon-small">
+                            <i class="fas fa-apple-alt"></i>
+                        </div>
+                        <div class="category-details">
+                            <h3>Nutrition & Dietetics</h3>
+                            <p>170+ projects</p>
+                        </div>
+                        <i class="fas fa-arrow-right category-arrow"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Law & Legal Studies -->
+            <div class="category-group" data-aos="fade-up">
+                <div class="group-header">
+                    <div class="group-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <div class="group-info">
+                        <h2 class="group-title">Law & Legal Studies</h2>
+                        <p class="group-count">6 Categories • 1,200+ Projects</p>
+                    </div>
+                </div>
+                
+                <div class="categories-grid">
+                    <a href="library.html?category=corporate-law" class="category-item">
+                        <div class="category-icon-small">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <div class="category-details">
+                            <h3>Corporate Law</h3>
+                            <p>320+ projects</p>
+                        </div>
+                        <i class="fas fa-arrow-right category-arrow"></i>
+                    </a>
+
+                    <a href="library.html?category=criminal-law" class="category-item">
+                        <div class="category-icon-small">
+                            <i class="fas fa-gavel"></i>
+                        </div>
+                        <div class="category-details">
+                            <h3>Criminal Law</h3>
+                            <p>280+ projects</p>
+                        </div>
+                        <i class="fas fa-arrow-right category-arrow"></i>
+                    </a>
+
+                    <a href="library.html?category=international-law" class="category-item">
+                        <div class="category-icon-small">
+                            <i class="fas fa-globe-americas"></i>
+                        </div>
+                        <div class="category-details">
+                            <h3>International Law</h3>
+                            <p>240+ projects</p>
+                        </div>
+                        <i class="fas fa-arrow-right category-arrow"></i>
+                    </a>
+
+                    <a href="library.html?category=constitutional-law" class="category-item">
+                        <div class="category-icon-small">
+                            <i class="fas fa-landmark"></i>
+                        </div>
+                        <div class="category-details">
+                            <h3>Constitutional Law</h3>
+                            <p>180+ projects</p>
+                        </div>
+                        <i class="fas fa-arrow-right category-arrow"></i>
+                    </a>
+
+                    <a href="library.html?category=family-law" class="category-item">
+                        <div class="category-icon-small">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <div class="category-details">
+                            <h3>Family Law</h3>
+                            <p>100+ projects</p>
+                        </div>
+                        <i class="fas fa-arrow-right category-arrow"></i>
+                    </a>
+
+                    <a href="library.html?category=intellectual-property" class="category-item">
+                        <div class="category-icon-small">
+                            <i class="fas fa-copyright"></i>
+                        </div>
+                        <div class="category-details">
+                            <h3>Intellectual Property</h3>
+                            <p>80+ projects</p>
+                        </div>
+                        <i class="fas fa-arrow-right category-arrow"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Natural Sciences -->
+            <div class="category-group" data-aos="fade-up">
+                <div class="group-header">
+                    <div class="group-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <div class="group-info">
+                        <h2 class="group-title">Natural Sciences</h2>
+                        <p class="group-count">7 Categories • 1,500+ Projects</p>
+                    </div>
+                </div>
+                
+                <div class="categories-grid">
+                    <a href="library.html?category=physics" class="category-item">
+                        <div class="category-icon-small">
+                            <i class="fas fa-atom"></i>
+                        </div>
+                        <div class="category-details">
+                            <h3>Physics</h3>
+                            <p>280+ projects</p>
+                        </div>
+                        <i class="fas fa-arrow-right category-arrow"></i>
+                    </a>
+
+                    <a href="library.html?category=chemistry" class="category-item">
+                        <div class="category-icon-small">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                        <div class="category-details">
+                            <h3>Chemistry</h3>
+                            <p>320+ projects</p>
+                        </div>
+                        <i class="fas fa-arrow-right category-arrow"></i>
+                    </a>
+
+                    <a href="library.html?category=biology" class="category-item">
+                        <div class="category-icon-small">
+                            <i class="fas fa-dna"></i>
+                        </div>
+                        <div class="category-details">
+                            <h3>Biology</h3>
+                            <p>290+ projects</p>
+                        </div>
+                        <i class="fas fa-arrow-right category-arrow"></i>
+                    </a>
+
+                    <a href="library.html?category=environmental-science" class="category-item">
+                        <div class="category-icon-small">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <div class="category-details">
+                            <h3>Environmental Science</h3>
+                            <p>240+ projects</p>
+                        </div>
+                        <i class="fas fa-arrow-right category-arrow"></i>
+                    </a>
+
+                    <a href="library.html?category=mathematics" class="category-item">
+                        <div class="category-icon-small">
+                            <i class="fas fa-square-root-alt"></i>
+                        </div>
+                        <div class="category-details">
+                            <h3>Mathematics</h3>
+                            <p>220+ projects</p>
+                        </div>
+                        <i class="fas fa-arrow-right category-arrow"></i>
+                    </a>
+
+                    <a href="library.html?category=geology" class="category-item">
+                        <div class="category-icon-small">
+                            <i class="fas fa-mountain"></i>
+                        </div>
+                        <div class="category-details">
+                            <h3>Geology</h3>
+                            <p>150+ projects</p>
+                        </div>
+                        <i class="fas fa-arrow-right category-arrow"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Social Sciences & Humanities -->
+            <div class="category-group" data-aos="fade-up">
+                <div class="group-header">
+                    <div class="group-icon">
+                        <i class="fas fa-people-carry"></i>
+                    </div>
+                    <div class="group-info">
+                        <h2 class="group-title">Social Sciences & Humanities</h2>
+                        <p class="group-count">9 Categories • 1,400+ Projects</p>
+                    </div>
+                </div>
+                
+                <div class="categories-grid">
+                    <a href="library.html?category=education" class="category-item">
+                        <div class="category-icon-small">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <div class="category-details">
+                            <h3>Education</h3>
+                            <p>380+ projects</p>
+                        </div>
+                        <i class="fas fa-arrow-right category-arrow"></i>
+                    </a>
+
+                    <a href="library.html?category=psychology" class="category-item">
+                        <div class="category-icon-small">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="category-details">
+                            <h3>Psychology</h3>
+                            <p>290+ projects</p>
+                        </div>
+                        <i class="fas fa-arrow-right category-arrow"></i>
+                    </a>
+
+                    <a href="library.html?category=sociology" class="category-item">
+                        <div class="category-icon-small">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="category-details">
+                            <h3>Sociology</h3>
+                            <p>220+ projects</p>
+                        </div>
+                        <i class="fas fa-arrow-right category-arrow"></i>
+                    </a>
+
+                    <a href="library.html?category=economics" class="category-item">
+                        <div class="category-icon-small">
+                            <i class="fas fa-chart-pie"></i>
+                        </div>
+                        <div class="category-details">
+                            <h3>Economics</h3>
+                            <p>210+ projects</p>
+                        </div>
+                        <i class="fas fa-arrow-right category-arrow"></i>
+                    </a>
+
+                    <a href="library.html?category=political-science" class="category-item">
+                        <div class="category-icon-small">
+                            <i class="fas fa-flag"></i>
+                        </div>
+                        <div class="category-details">
+                            <h3>Political Science</h3>
+                            <p>150+ projects</p>
+                        </div>
+                        <i class="fas fa-arrow-right category-arrow"></i>
+                    </a>
+
+                    <a href="library.html?category=history" class="category-item">
+                        <div class="category-icon-small">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <div class="category-details">
+                            <h3>History</h3>
+                            <p>150+ projects</p>
+                        </div>
+                        <i class="fas fa-arrow-right category-arrow"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Architecture & Arts -->
+            <div class="category-group" data-aos="fade-up">
+                <div class="group-header">
+                    <div class="group-icon">
+                        <i class="fas fa-drafting-compass"></i>
+                    </div>
+                    <div class="group-info">
+                        <h2 class="group-title">Architecture & Arts</h2>
+                        <p class="group-count">5 Categories • 900+ Projects</p>
+                    </div>
+                </div>
+                
+                <div class="categories-grid">
+                    <a href="library.html?category=architecture" class="category-item">
+                        <div class="category-icon-small">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <div class="category-details">
+                            <h3>Architecture</h3>
+                            <p>340+ projects</p>
+                        </div>
+                        <i class="fas fa-arrow-right category-arrow"></i>
+                    </a>
+
+                    <a href="library.html?category=fine-arts" class="category-item">
+                        <div class="category-icon-small">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <div class="category-details">
+                            <h3>Fine Arts</h3>
+                            <p>220+ projects</p>
+                        </div>
+                        <i class="fas fa-arrow-right category-arrow"></i>
+                    </a>
+
+                    <a href="library.html?category=graphic-design" class="category-item">
+                        <div class="category-icon-small">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <div class="category-details">
+                            <h3>Graphic Design</h3>
+                            <p>180+ projects</p>
+                        </div>
+                        <i class="fas fa-arrow-right category-arrow"></i>
+                    </a>
+
+                    <a href="library.html?category=music" class="category-item">
+                        <div class="category-icon-small">
+                            <i class="fas fa-music"></i>
+                        </div>
+                        <div class="category-details">
+                            <h3>Music</h3>
+                            <p>100+ projects</p>
+                        </div>
+                        <i class="fas fa-arrow-right category-arrow"></i>
+                    </a>
+
+                    <a href="library.html?category=film-media" class="category-item">
+                        <div class="category-icon-small">
+                            <i class="fas fa-film"></i>
+                        </div>
+                        <div class="category-details">
+                            <h3>Film & Media</h3>
+                            <p>60+ projects</p>
+                        </div>
+                        <i class="fas fa-arrow-right category-arrow"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content" data-aos="zoom-in">
+                <h2>Can't Find Your Category?</h2>
+                <p>Contact us and we'll help you find the perfect academic material for your needs</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary btn-large">
+                        <i class="fas fa-envelope"></i> Contact Us
+                    </a>
+                    <a href="https://wa.me/YOUR_PHONE_NUMBER?text=Hi! I need help finding academic materials" class="btn btn-whatsapp btn-large" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <div class="footer-brand">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Academia<span class="brand-highlight">Hub</span></span>
+                    </div>
+                    <p class="footer-description">
+                        Your trusted source for premium academic research papers, thesis, dissertations, and project materials across all disciplines.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="categories.html">Categories</a></li>
+                        <li><a href="library.html">Library</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Top Categories</h4>
+                    <ul>
+                        <li><a href="library.html?category=engineering">Engineering</a></li>
+                        <li><a href="library.html?category=computer-science">Computer Science</a></li>
+                        <li><a href="library.html?category=business">Business & MBA</a></li>
+                        <li><a href="library.html?category=medical">Medical Sciences</a></li>
+                        <li><a href="library.html?category=law">Law Studies</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:info@academiahub.com">info@academiahub.com</a>
+                        </li>
+                        <li>
+                            <i class="fab fa-whatsapp"></i>
+                            <a href="https://wa.me/YOUR_PHONE_NUMBER" target="_blank">WhatsApp Support</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <span>24/7 Available</span>
+                        </li>
+                    </ul>
+                    <div class="payment-methods">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fab fa-cc-paypal"></i>
+                        <i class="fab fa-cc-stripe"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 AcademiaHub. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
